@@ -1,3 +1,3 @@
 export default function App() {
-  return <h1 className="bg-black h-[100vh] text-white font-bold text-center">Hello, this is fulldream</h1>;
+  return <h1 className='h-[100vh] bg-black text-center font-bold text-white'>Hello, this is fulldream</h1>;
 }
