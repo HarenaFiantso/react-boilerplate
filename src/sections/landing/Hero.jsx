@@ -1,4 +1,4 @@
-import { staggerContainer, textVariant } from '../../utils/motion';
+import { slideIn, staggerContainer, textVariant } from '../../utils/motion';
 import { motion } from 'framer-motion';
 
 export default function Hero() {
@@ -33,8 +33,13 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <motion.div variants={}>
-          <div className='hero-gradient absolute -top-[30px] z-[0] h-[300px] w-full rounded-tl-[140px]'></div>
+        <motion.div
+          variants={slideIn('right', 'tween', 0.2, 1)}
+          className='relative -mt-[12px] w-full md:-mt-[20px]'
+        >
+          <div className='hero-gradient absolute -top-[30px] z-[0] h-[300px] w-full rounded-tl-[140px]'>
+            
+          </div>
         </motion.div>
       </motion.div>
     </section>
