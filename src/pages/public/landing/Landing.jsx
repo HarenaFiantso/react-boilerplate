@@ -1,4 +1,14 @@
 import { Footer, Navbar } from '../../../components/landing';
+import {
+  About,
+  Explore,
+  Feedback,
+  GetStarted,
+  Hero,
+  Insights,
+  WhatsNew,
+  World,
+} from '../../../sections/landing';
 
 export default function Landing() {
   return (
