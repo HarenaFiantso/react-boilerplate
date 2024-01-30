@@ -1,3 +1,5 @@
+import Cover from '../../assets/landing/cover.png';
+import Stamp from '../../assets/landing/stamp.png';
 import { slideIn, staggerContainer, textVariant } from '../../utils/motion';
 import { motion } from 'framer-motion';
 
@@ -37,9 +39,16 @@ export default function Hero() {
           variants={slideIn('right', 'tween', 0.2, 1)}
           className='relative -mt-[12px] w-full md:-mt-[20px]'
         >
-          <div className='hero-gradient absolute -top-[30px] z-[0] h-[300px] w-full rounded-tl-[140px]'>
-            
-          </div>
+          <div className='hero-gradient absolute -top-[30px] z-[0] h-[300px] w-full rounded-tl-[110px] ' />
+          <a href='#explore'>
+            <motion.div className='relative z-[10] -mt-[50px] flex w-full justify-start pr-[40px] sm:-mt-[70px]'>
+              <img
+                src={Stamp}
+                alt='stamp'
+                className='h-[100px] w-[100px] object-contain sm:h-[155px] sm:w-[155px]'
+              />
+            </motion.div>
+          </a>
         </motion.div>
       </motion.div>
     </section>
