@@ -1,4 +1,3 @@
-import Cover from '../../assets/landing/cover.png';
 import Stamp from '../../assets/landing/stamp.png';
 import { slideIn, staggerContainer, textVariant } from '../../utils/motion';
 import { motion } from 'framer-motion';
