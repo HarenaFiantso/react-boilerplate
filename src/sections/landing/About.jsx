@@ -1,4 +1,5 @@
-import { staggerContainer } from '../../utils/motion';
+import { TypingText } from '../../components/landing/CustomTexts';
+import { fadeIn, staggerContainer } from '../../utils/motion';
 import { motion } from 'framer-motion';
 
 export default function About() {
@@ -11,7 +12,14 @@ export default function About() {
           whileInView='show'
           viewport={{ once: false, amount: 0.25 }}
           className='mx-auto flex w-full flex-col items-center justify-center 2xl:max-w-[1280px]'
-        ></motion.div>
+        >
+          <TypingText
+            title='| About this boilerplate'
+            textStyles='text-center'
+          />
+
+          <motion.p variants={fadeIn('up', 'tween', 0.2, 1)}></motion.p>
+        </motion.div>
       </div>
     </section>
   );
