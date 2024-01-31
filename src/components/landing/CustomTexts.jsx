@@ -1,4 +1,4 @@
-import { textContainer } from '../../utils/motion';
+import { textContainer, textVariant2 } from '../../utils/motion';
 import { motion } from 'framer-motion';
 
 export const TypingText = ({ title, textStyles }) => {
@@ -7,7 +7,9 @@ export const TypingText = ({ title, textStyles }) => {
     className={`text-[14px] font-normal text-secondary-white ${textStyles}`}
   >
     {Array.from(title).map((letter, index) => (
-        <motion.span></motion.span>
+      <motion.span variants={textVariant2} key={index}>
+        {letter === ' ' ? '\u00A0' : letter}
+      </motion.span>
     ))}
   </motion.p>;
 };
