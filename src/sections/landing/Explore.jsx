@@ -4,6 +4,7 @@ import Planet_3 from '../../assets/landing/planet-03.png';
 import Planet_4 from '../../assets/landing/planet-04.png';
 import Planet_5 from '../../assets/landing/planet-05.png';
 import { TitleText, TypingText } from '../../components/landing/CustomTexts';
+import ExploreCard from '../../components/landing/ExploreCard';
 import { staggerContainer } from '../../utils/motion';
 import { motion } from 'framer-motion';
 
@@ -57,7 +58,7 @@ export default function Explore() {
         />
         <div className='mt-[50px] flex min-h-[70vh] flex-col gap-5 lg:flex-row'>
           {exploreWorlds.map((world, index) => (
-            <h1>Explore the world</h1>
+            <ExploreCard>Explore the world</ExploreCard>
           ))}
         </div>
       </motion.div>
