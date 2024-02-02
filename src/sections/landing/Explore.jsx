@@ -7,6 +7,7 @@ import { TitleText, TypingText } from '../../components/landing/CustomTexts';
 import ExploreCard from '../../components/landing/ExploreCard';
 import { staggerContainer } from '../../utils/motion';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const exploreWorlds = [
   {
@@ -37,6 +38,8 @@ const exploreWorlds = [
 ];
 
 export default function Explore() {
+  const [active, setActive] = useState('world-2');
+
   return (
     <section className='xs:p-8 px-6 py-12 sm:p-16' id='explore'>
       <motion.div
@@ -58,7 +61,13 @@ export default function Explore() {
         />
         <div className='mt-[50px] flex min-h-[70vh] flex-col gap-5 lg:flex-row'>
           {exploreWorlds.map((world, index) => (
-            <ExploreCard>Explore the world</ExploreCard>
+            <ExploreCard
+              key={world.id}
+              {...world}
+              index={index}
+              active={active}
+              handleClick={setActive}
+            />
           ))}
         </div>
       </motion.div>
