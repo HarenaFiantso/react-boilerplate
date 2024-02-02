@@ -1,7 +1,9 @@
 import Headset from '../../assets/landing/headset.svg';
 import VrPano from '../../assets/landing/vrpano.svg';
+import WhatsNewImg from '../../assets/landing/whats-new.png';
 import { TitleText, TypingText } from '../../components/landing/CustomTexts';
-import { fadeIn, staggerContainer } from '../../utils/motion';
+import NewFeatures from '../../components/landing/NewFeatures';
+import { fadeIn, planetVariants, staggerContainer } from '../../utils/motion';
 import { motion } from 'framer-motion';
 
 const newFeatures = [
@@ -35,11 +37,21 @@ export default function WhatsNew() {
         >
           <TypingText title="| What's new" />
           <TitleText title={<>What's new with this boilerplate ?</>} />
-          <div className='mt-[48px] flex flex-wrap justify-between gap-[24px]'>
+          <div className='mt-[48px] flex flex-wrap justify-between gap-[10px]'>
             {newFeatures.map((feature) => (
               <NewFeatures key={feature.title} {...feature} />
             ))}
           </div>
+        </motion.div>
+        <motion.div
+          variants={planetVariants('right')}
+          className='flex flex-1 items-center justify-center'
+        >
+          <img
+            src={WhatsNewImg}
+            alt='get-started'
+            className='h-[90%] w-[90%] object-contain'
+          />
         </motion.div>
       </motion.div>
     </section>
