@@ -1,25 +1,26 @@
-import Planet1 from '../../assets/landing/planet-06.png';
-import Planet2 from '../../assets/landing/planet-07.png';
-import Planet3 from '../../assets/landing/planet-08.png';
+import Planet_6 from '../../assets/landing/planet-06.png';
+import Planet_7 from '../../assets/landing/planet-07.png';
+import Planet_8 from '../../assets/landing/planet-08.png';
 import { TitleText, TypingText } from '../../components/landing/CustomTexts';
+import InsightCard from '../../components/landing/InsightCard';
 import { staggerContainer } from '../../utils/motion';
 import { motion } from 'framer-motion';
 
 export const insights = [
   {
-    imgUrl: Planet1,
+    imgUrl: Planet_6,
     title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     subtitle:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio facere dignissimos quis, neque velit odio impedit praesentium aperiam porro soluta ipsa dolores modi officia quod architecto corporis? Ratione, perspiciatis dignissimos?',
   },
   {
-    imgUrl: Planet2,
+    imgUrl: Planet_7,
     title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     subtitle:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio facere dignissimos quis, neque velit odio impedit praesentium aperiam porro soluta ipsa dolores modi officia quod architecto corporis? Ratione, perspiciatis dignissimos?',
   },
   {
-    imgUrl: Planet3,
+    imgUrl: Planet_8,
     title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     subtitle:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio facere dignissimos quis, neque velit odio impedit praesentium aperiam porro soluta ipsa dolores modi officia quod architecto corporis? Ratione, perspiciatis dignissimos?',
@@ -42,13 +43,9 @@ export default function Insights() {
           textStyles='text-center'
         />
         <div className='mt-[50px] flex flex-col gap-[30px]'>
-          {insights.map((item, index) => {
-            <InsightCard
-              key={`insight-${index}`}
-              {...item}
-              index={index + 1}
-            />;
-          })}
+          {insights.map((item, index) => (
+            <InsightCard key={`insight-${index}`} {...item} index={index + 1} />
+          ))}
         </div>
       </motion.div>
     </section>
