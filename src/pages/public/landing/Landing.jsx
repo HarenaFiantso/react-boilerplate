@@ -1,8 +1,7 @@
-import { Footer, Navbar } from '../../../components/landing';
+import { Navbar } from '../../../components/landing';
 import {
   About,
   Explore,
-  Feedback,
   GetStarted,
   Hero,
   Insights,
@@ -29,9 +28,7 @@ export default function Landing() {
       <div className='relative'>
         <Insights />
         <div className='gradient-04 z-0' />
-        <Feedback />
       </div>
-      <Footer />
     </div>
   );
 }
