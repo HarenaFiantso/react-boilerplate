@@ -1,7 +1,4 @@
 import MapImg from '../../assets/landing/map.png';
-import People1 from '../../assets/landing/people-01.png';
-import People2 from '../../assets/landing/people-02.png';
-import People3 from '../../assets/landing/people-03.png';
 import { TitleText, TypingText } from '../../components/landing/CustomTexts';
 import { fadeIn, staggerContainer } from '../../utils/motion';
 import { motion } from 'framer-motion';
@@ -31,18 +28,6 @@ export default function World() {
           className='relative mt-[68px] flex h-[550px] w-full'
         >
           <img src={MapImg} alt='map' className='h-full w-full object-cover' />
-
-          <div className='absolute bottom-20 right-20 h-[70px] w-[70px] rounded-full bg-[#5D6680] p-[6px]'>
-            <img src={People1} alt='people' className='h-full w-full' />
-          </div>
-
-          <div className='absolute left-20 top-10 h-[70px] w-[70px] rounded-full bg-[#5D6680] p-[6px]'>
-            <img src={People2} alt='people' className='h-full w-full' />
-          </div>
-
-          <div className='absolute left-[45%] top-1/2 h-[70px] w-[70px] rounded-full bg-[#5D6680] p-[6px]'>
-            <img src={People3} alt='people' className='h-full w-full' />
-          </div>
         </motion.div>
       </motion.div>
     </section>
