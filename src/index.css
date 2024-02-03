@@ -25,7 +25,7 @@
     #34acc7 53.65%,
     #a134c7 100%
   );
-  filter: blur(125px);
+  filter: blur(190px);
 }
 
 .gradient-02 {
@@ -34,7 +34,6 @@
   height: 438px;
   top: 0px;
   right: 0px;
-
   background: #7aebfb;
   filter: blur(190px);
 }
