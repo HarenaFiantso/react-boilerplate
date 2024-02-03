@@ -43,7 +43,11 @@ export default function Insights() {
         />
         <div className='mt-[50px] flex flex-col gap-[30px]'>
           {insights.map((item, index) => {
-            <h1>Something good here</h1>
+            <InsightCard
+              key={`insight-${index}`}
+              {...item}
+              index={index + 1}
+            />;
           })}
         </div>
       </motion.div>
